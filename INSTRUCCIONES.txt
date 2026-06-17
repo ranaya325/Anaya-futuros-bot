@@ -1,0 +1,50 @@
+══════════════════════════════════════════════════════════
+  ANAYA FUTUROS BOT — Instrucciones de instalación
+══════════════════════════════════════════════════════════
+
+PASO 1 — Crear cuenta en Render.com
+────────────────────────────────────
+1. Ve a https://render.com
+2. Clic en "Get Started for Free"
+3. Regístrate con Google o email
+
+PASO 2 — Subir el bot
+────────────────────────────────────
+1. Ve a https://github.com y crea cuenta gratis
+2. Crea un nuevo repositorio llamado "anaya-futuros-bot"
+3. Sube los archivos: bot.py, requirements.txt, render.yaml
+   (arrastra y suelta en GitHub)
+4. En Render → "New Web Service" → conecta tu repositorio de GitHub
+5. Render detecta render.yaml automáticamente → clic Deploy
+
+PASO 3 — Configurar variables de entorno en Render
+────────────────────────────────────
+En Render → tu servicio → "Environment":
+  BOT_TOKEN     = (tu contraseña, ejemplo: mibot2024)
+  BINANCE_API_KEY  = (tu API key de Binance)
+  BINANCE_SECRET   = (tu Secret key de Binance)
+
+PASO 4 — Conectar desde Anaya Futuros
+────────────────────────────────────
+1. Copia la URL de tu bot en Render
+   (algo como: https://anaya-futuros-bot.onrender.com)
+2. Pégala en Anaya Futuros → 🤖 Algo Trading → "URL del Servidor"
+3. Pon tu BOT_TOKEN
+4. Clic "Conectar Servidor"
+5. Clic "▶ INICIAR BOT"
+
+¡Listo! El bot corre 24/7 en Render aunque cierres el teléfono.
+
+══════════════════════════════════════════════════════════
+  TELEGRAM (opcional) — recibe alertas de cada operación
+══════════════════════════════════════════════════════════
+1. En Telegram busca @BotFather → /newbot → sigue instrucciones
+2. Copia el token que te da
+3. Busca @userinfobot en Telegram → te da tu Chat ID
+4. En Render → Environment:
+   TELEGRAM_TOKEN = (token de BotFather)
+   TELEGRAM_CHAT  = (tu Chat ID)
+
+Ahora recibirás un mensaje en Telegram cada vez que el bot
+abra o cierre una operación.
+══════════════════════════════════════════════════════════
