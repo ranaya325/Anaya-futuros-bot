@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: anaya-futuros-bot
+    runtime: python3
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        value: anaya2024
+      - key: BINANCE_API_KEY
+        value: ""
+      - key: BINANCE_SECRET
+        value: ""
+      - key: TELEGRAM_TOKEN
+        value: ""
+      - key: TELEGRAM_CHAT
+        value: ""
